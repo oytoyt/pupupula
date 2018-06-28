@@ -1,6 +1,7 @@
 <template>
   <div id="milk" class="route">
     <canvas class="top" @touchstart="start" @touchmove.prevent="move" @touchend="end"></canvas>
+    <img v-if="isShow" :src="imgSrc">
     <div class="bottom">
       <ul class="type">
         <li v-for="item in typeList" :key="item.id" v-text="item.name" @touchstart="changeType(item.id)"></li>
@@ -17,28 +18,22 @@
 <script>
 import weui from "weui.js";
 import util from "../../assets/js/util";
-import user from "../../assets/js/user";
 import helper from "../../assets/js/helper";
-import request from "../../assets/js/request";
-import wxconfig from "../../assets/js/wxconfig";
 import constant from "../../assets/js/constant";
 
 export default {
   name: "milk",
   data() {
     return {
-      uinfo: {},
-      tinfo: {},
-
       typeList: [
         { name: "表情", id: 0 }, 
         { name: "文字", id: 1 }
       ],
       
       materialList: [
-        ["http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/body_up/14.50de1.png", "http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/body_low/01.304a9.png", "http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/face/06.2775e.png", "http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/body_low/01.304a9.png", "http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/face/06.2775e.png"],
-        ["http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/body_low/02.a48bb.png", "http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/body_low/04.65973.png", "http://pupupula.net/spring/res/raw-assets/resources/PNG/Male/body_low/03.b5daa.png"],
-        ["http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png"]
+        ["http://qiniu.ouyanting.vip//pupupula5.png", "http://qiniu.ouyanting.vip//pupupula4.png", "http://qiniu.ouyanting.vip//pupupula6.png"],
+        ["http://qiniu.ouyanting.vip//pupupula3.png", "http://qiniu.ouyanting.vip//pupupula2.png", "http://qiniu.ouyanting.vip//pupupula1.png"],
+        ["http://qiniu.ouyanting.vip/8.jpg", "http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png"]
       ],
       activeList: [],
       // 保存图片路径
@@ -54,7 +49,10 @@ export default {
       delEl: {},
 
       canvas: null,
-      ctx: null
+      ctx: null,
+      imgSrc: "",
+
+      isShow: false
     };
   },
   beforeCreate() {
@@ -63,15 +61,9 @@ export default {
   },
   created() {
     const that = this;
-    wxconfig.initUserInfo(uinfo => {
-      that.uinfo = uinfo;
-      user.initTempInfo(info => {
-        that.tinfo = info || {};
-        that.changeType();
-      });
-    });
     that.preLoadImg();
     that.checkEl();
+    that.changeType();
   },
   methods: {
     setImg(ev) {
@@ -131,10 +123,15 @@ export default {
     },
     clearCanvas() {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ctx.drawImage(this.imgList[this.imgList.length - 2], 0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
     },
     saveCanvas() {
+      this.setCanvas();
       let imgSrc = this.canvas.toDataURL("image/jpeg", 1);
       console.log(imgSrc);
+      this.imgSrc = imgSrc;
+      this.isShow = true;
+      weui.toast("长按保存");
     },
     setCanvas(flag) {
       this.clearCanvas();
@@ -184,7 +181,7 @@ export default {
           length++;
           __arr.push(temp[j]);
           _arr.push(new Image());
-          // _arr[_arr.length - 1].crossOrigin = "anonymous";
+          _arr[_arr.length - 1].crossOrigin = "anonymous";
           _arr[_arr.length - 1].src = temp[j];
           _arr[_arr.length - 1].onload = () => { index++; }
           _arr[_arr.length - 1].onerror = () => { index++; }
@@ -206,6 +203,7 @@ export default {
         let el = document.querySelector("#milk");
         if(el){
           that.getCanvas();
+          that.setCanvas();
           clearInterval(time);
         }
       }, 100);

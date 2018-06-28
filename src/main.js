@@ -10,7 +10,6 @@ import wx from 'weixin-js-sdk';
 
 import util from "./assets/js/util";
 import store from "./assets/js/store";
-import wxconfig from './assets/js/wxconfig';
 // css
 import 'animate.css';
 import 'weui';
@@ -18,19 +17,6 @@ import 'weui';
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
-function wxConfig(config, jsApiList = []){
-  let defaultJsApiList = ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'onMenuShareQZone', 'showOptionMenu'];
-  jsApiList = util.concat(jsApiList, defaultJsApiList);
-
-	wx.config({
-  	// debug: true,
-	  appId: config.appId,
-	  timestamp: config.timestamp || 0,
-	  nonceStr: config.nonceStr,
-	  signature: config.signature,
-	  jsApiList: jsApiList
-	});
-}
 
 new Vue({
   router,
@@ -49,22 +35,8 @@ new Vue({
   },
   created() {
     const that = this;
-    that._wxConfig();
-    wxconfig.initWxShare();
   },
   methods: {
-    _wxConfig() {
-      let url = encodeURIComponent(location.href.split('#')[0]);
-      axios.get(`/Baide/wxconfig?signUrl=${url}`)
-      .then(resp => {
-        resp = resp.data;
-        const SUCCESS = 0, FAIL = 1;
-
-        resp.status == FAIL ? 
-        console.log("errMsg: ", resp.msg) : 
-        wxConfig(resp.data, ['openLocation', 'getLocation', 'scanQRCode', 'chooseWXPay', 'closeWindow', 'hideAllNonBaseMenuItem']);
-      })
-    }
   },
   render: fn => fn(App)
 }).$mount("#app")

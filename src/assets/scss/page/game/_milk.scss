@@ -1,5 +1,6 @@
 #milk{
   &{ height: 100%; }
+  & canvas + img{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; }
   & .top{ width: 100%; height: 80%; background: yellowgreen; }
   & .bottom{ 
     &{ width: 100%; height: px2rem(180); background: turquoise; position: fixed; bottom: 0; }
