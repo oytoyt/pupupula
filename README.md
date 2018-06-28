@@ -1,6 +1,6 @@
 # wordcup
 
-> 世界杯集卡游戏
+> 仿pupupula
 
 ## Build Setup
 
