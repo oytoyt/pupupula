@@ -1,0 +1,10 @@
+*{ box-sizing: border-box; }
+a{ text-decoration: none;color: currentcolor; }
+html,body{ height: 100%; }
+html{ font-size: $rem; }
+body{ font-size: $rem; }
+.clearfix:after{ content: ''; display: block; clear: both; height: 0; visibility: hidden; }
+.clearfix{ zoom: 1; }
+button{ -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; outline: none; border: none; }
+
+@include columns();

@@ -1,0 +1,136 @@
+#game{
+  &{ @include posFull(); padding: 0 px2rem(0) px2rem(0); }
+  & > .canvas, .passBall, .tips{ margin: 0 px2rem(18); }
+  #mcover{ margin: 0; }
+  & header{
+    // &{ padding-bottom: px2rem(14); }
+    // & img{ width: 100%; display: block; }
+    &{ background: url("http://cdns.jige.fun/o_1cfp7tikh1c8t1k9j1sei13hg1o7mc.png") no-repeat; background-size: 100% auto; width: 100%; height: px2rem(210); }
+    & span{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; transform: translateY(px2rem(-13)); border: px2rem(1) solid #fff; display: inline-block; transform: translate3d(px2rem(10), px2rem(10), 0); padding: 0 px2rem(5); }
+    & .price{
+      & img{ width: px2rem(26); height: px2rem(25); background: url("http://cdns.jige.fun/o_1cfei393o2fn1a7a10ji1vc370g7.png") no-repeat; background-size: cover; }
+      &{ position: fixed; top: 0; right: 0; transform: translate3d(px2rem(-10), px2rem(10), 0); z-index: 999; }
+      & p{ color: #fff; font-size: px2rem(14); font-weight: 300; line-height: px2rem(28); float: right; padding-left: px2rem(5); }
+    }
+  }
+  & .rule{
+    & div{
+      &{ padding: px2rem(8) px2rem(30); background: #289545; background-image: linear-gradient(-180deg, #33AE54 0%, #289545 100%);  box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(49,65,38,0.73); border-radius: px2rem(8); margin: 0 px2rem(14) px2rem(15); }
+      & dt{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; font-weight: 400; text-align: center; }
+      & dd{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; font-weight: 300; }
+    }
+    & p{ margin-bottom: px2rem(13); }
+    & .tips{ background: #FFFFFF; border-radius: px2rem(40); text-align: center; font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(14); color: #31A951; line-height: px2rem(30); }
+  }
+  & .canvas{
+    &{ text-align: center; padding-bottom: px2rem(26); }
+    & div{ 
+      &{ background: url(http://cdns.jige.fun/o_1cfc1bv1g1n7112vg86i10hd1mas7.gif) no-repeat; background-size: cover; border-radius: px2rem(5); height: px2rem(210); position: relative; overflow: hidden; }
+      & img{ width: px2rem(30); height: auto; padding-top: px2rem(35); }
+    }
+    & p{ width: 100%; height: 100%; background: url("http://cdns.jige.fun/o_1cfc3tqf6tg4h5r1ijc1con1laf7.png") no-repeat; background-size: cover; position: absolute; top: 0; left: 0; }
+    & .bg_active{ background-image: url("http://cdns.jige.fun/o_1cfc6ug1nmsgi63q8t1at51oakh.gif"); }
+    & .bg_stop{ background-image: url("http://cdns.jige.fun/o_1cfce4odf100a10rj1nddc3711uu7.png"); z-index: 999; }
+    & button{ width: 100%; height: px2rem(49); margin: px2rem(19) 0 0; font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(16); }
+    & button.disabled{ pointer-events: none; }
+    & span{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(12); color: #F7D332; }
+    & ul{ position: absolute; top: 0; left: 0; display: flex; }
+    & ul.game-roll{ animation: game-roll 15s 0s infinite linear; }
+    & ul.game-bounce{ filter: blur(px2rem(3)); animation-name: game-bounce; transform-origin: center bottom; animation-duration: 1s; }
+    & li{ color: #fff; padding: 0 px2rem(10); }
+    & img{ width: 100%; height: 100%; display: block; }
+  }
+  & .passBall{
+    &{ background-image: linear-gradient(-180deg, #36D561 0%, #2A9B48 100%); box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.50); border-radius: px2rem(5); padding: 0 px2rem(15); text-align: center; color: #fff; padding-bottom: px2rem(16); }
+    & h5{ color: #fff; font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(20); font-weight: 400; line-height: px2rem(50); }
+    & img{ display: block; width: 100%; height: px2rem(138); border: px2rem(2) solid #fff; }
+    & .fun{ position: relative; }
+    & .fun:after{ content: ""; background: url("http://cdns.jige.fun/o_1cfq0d1mc10o310nn446trh137i7.png") no-repeat; background-size: 100% auto; display: block; width: px2rem(60); height: px2rem(60); position: absolute; top: 0; left: 0; }
+    & h6{ font-size: px2rem(16); color: #fff; padding-bottom: px2rem(5); line-height: px2rem(25); display: flex; justify-content: center; }
+    & h6 img{ width: px2rem(25); height: px2rem(25); border: none; margin-right: px2rem(5); }
+    // & h6 p{ float: left; }
+    & h6 span{ color: #FFCB4A; }
+    & p{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(12); line-height: px2rem(16); padding: px2rem(5) 0; }
+    // & p span{ font-size: px2rem(12); }
+    & ul{
+      &{ padding: px2rem(15) 0 px2rem(30); }
+      & div{ position: relative; width: px2rem(62); height: px2rem(62); background: #fff; }
+      & li{ width: px2rem(62); float: left; box-sizing: content-box; }
+      & li + li{ padding-left: px2rem(20); }
+      & div img{ width: 100%; height: 100%; display: block; }
+      & div span{ position: absolute; bottom: px2rem(-5); right: px2rem(-5); font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: 12px; color: #FFFFFF; border-radius: 50%; width: px2rem(18); height: px2rem(18); text-align: center; line-height: px2rem(18); background: #5FCEF9; box-shadow: 0 0 px2rem(1) 0 rgba(0,0,0,0.50); font-weight: 400; }
+      & p{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(12); color: #FFFFFF; text-align: center; line-height: px2rem(16); padding-top: px2rem(10); }
+    }
+    & button{ width: px2rem(146); height: px2rem(36.5); font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(13); float: left; }
+    & button + button{ float: right; }
+  }
+
+  & .cardBag{ width: px2rem(68); background: url("http://cdns.jige.fun/o_1cgbkktjf1q66clgbfjoartul7.png") no-repeat; background-size: px2rem(68) px2rem(68); position: fixed; top: px2rem(450); right: 0; padding-top: px2rem(68); font-size: px2rem(12); color: #fff; text-align: center; font-weight: 600; line-height: px2rem(12); }
+
+  & > .shareModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; text-align: center; }
+    & h2{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(36); color: #fff; font-weight: 600; padding-bottom: px2rem(10); }
+    & .model-content{ background: #35B958; border-radius: px2rem(14); width: px2rem(325); position: absolute; top: px2rem(30); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; float: right; margin: px2rem(8); background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; }
+    & .model-body{
+      & { padding: px2rem(83) 0 px2rem(10); text-align: center; }
+      & img{ width: px2rem(313); max-height: px2rem(200); display: block; margin: 0 auto; padding-bottom: px2rem(16); }
+      & span{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; font-weight: 600; }
+    }
+    & .model-btn{
+      &{ padding: 0 px2rem(18) px2rem(25); }
+      & button{ width: 100%; height: px2rem(49); }
+      & button + button{ margin-top: px2rem(10); }
+    }
+  }
+
+
+  & .cardModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; text-align: center; }
+    & .model-content{ transform: translateY(px2rem(30)); position: relative; width: px2rem(235); margin: 0 auto; }
+    & .model-close{ width: px2rem(37); height: px2rem(37); border-radius: 50%; background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; position: absolute; right: 0; top: 0; transform: translate(50%, -50%); }
+    & img{ width: px2rem(235); }
+    & button{ width: px2rem(200); height: px2rem(39); }
+  }
+
+  & .ruleModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; text-align: center; }
+    & h2{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(36); color: #fff; font-weight: 600; padding-bottom: px2rem(10); }
+    & .model-content{ background: #35B958; border-radius: px2rem(14); width: px2rem(325); position: absolute; top: px2rem(20); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; position: absolute; top: px2rem(-8); right: px2rem(-8); }
+    & .model-body{
+      & { padding: px2rem(20); padding-top: px2rem(20); text-align: left; font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(16); color: #fff; font-weight: 300; }
+      & h4{ font-weight: 800; text-align: center; font-size: px2rem(20); color: #fff; }
+      & h6{ color: #fff; }
+      & h6:last-of-type{ padding-top: px2rem(10); }
+    }
+  }
+}
+
+
+@keyframes game-roll {
+  0% {
+      transform: translate3d(0, 0, 0);
+  }
+  100% {
+      transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes game-bounce {
+  0%, 20%, 53%, 80%, 100% {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(-30px, 0, 0);
+  }
+  70% {
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      transform: translate3d(-15px, 0, 0);
+  }
+  90% {
+      transform: translate3d(-4px, 0, 0);
+  }
+}

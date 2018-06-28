@@ -1,0 +1,113 @@
+#dial{
+  &{ @include posFull(); padding: px2rem(0) px2rem(0) px2rem(0); }
+  & > div{ margin: 0 px2rem(20); }
+  .rule~div{ margin: 0; }
+
+  & .btn-group{
+    & button + button{ float: right; }
+    & button{ border-radius: px2rem(6); height: px2rem(46); line-height: px2rem(46); width: px2rem(159); font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); font-weight: 600; }
+  }
+
+  & header{
+    &{ width: 100%; height: px2rem(220); background: url("http://cdns.jige.fun/o_1cfpprl24162mhcgf01170e1roam.png") no-repeat; background-size: 100% auto; background-position-y: px2rem(10); }
+  }
+
+  & .container{
+    &{ position: relative; padding-top: px2rem(20); }
+    // 鸡哥
+    &:after{ content: ""; display: block; background: url(http://cdns.jige.fun/o_1ceoa0jsd1eidv7k9fmsnqilrc.png) no-repeat; background-position: left bottom; background-size: px2rem(79) px2rem(163); width: px2rem(200); height: px2rem(200); position: absolute; bottom: px2rem(-50); left: px2rem(28); }
+    & .count{
+      &{ position: relative; }
+      & .circle{ border: px2rem(9) solid #35B958; width: px2rem(48); height: px2rem(48); line-height: px2rem(48); background-color: #fff; border-radius: 50%; box-sizing: content-box; text-align: center; box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.50); float: left; color: #F7C143; font-weight: 600; font-size: px2rem(22); position: relative; z-index: 3; }
+      & .circle + div{ background: #35B958; color: #fff; float: left; height: px2rem(44); line-height: px2rem(44); padding: 0 px2rem(20); position: absolute; top: 0; bottom: 0; left: px2rem(55); border-radius: 0 px2rem(22) px2rem(22) 0; margin: auto; font-weight: 400; box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.50); }
+    }
+    & .gb-turntable{ transform: translateY(px2rem(-20)); }
+  }
+
+  & > .btn-group{
+    &{ padding-top: px2rem(100); }
+    & button{ display: block; margin: 0 auto; }
+  }
+
+  & .transition{
+    &{ font-family: "SourceHanSansCN-Light", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; text-align: center; color: #fff; padding: px2rem(30) 0 px2rem(30); }
+  }
+
+  & .ranking{
+    &{ padding: px2rem(12) px2rem(15) px2rem(16); }
+    & dt{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; text-align: center; padding-bottom: px2rem(9); font-weight: 400; }
+    & dd{
+      & img{ width: px2rem(44); height: px2rem(44); border-radius: 50%; float: left; margin-right: px2rem(10); }
+      & p{ font-size: px2rem(14); color: #fff; line-height: px2rem(44); float: left; }
+      & p:first-of-type{ width: px2rem(100); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      & p + p{ float: right; width: px2rem(100); text-align: left; }
+    }
+    & dt + p{ font-size: px2rem(20); color: #fff; text-align: center; opacity: 0.8; }
+    & dd + dd{ padding-top: px2rem(6); }
+  }
+
+  & .rule{
+    &{ margin-top: px2rem(13); padding: px2rem(18) px2rem(22) px2rem(20); }
+    & dt{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; text-align: center; font-weight: 400; }
+    & dd{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(16); color: #FFFFFF; line-height: px2rem(24); }
+  }
+
+  & .ranking, & .rule{ background-color: #35B958; box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.50); border-radius: px2rem(6); }
+
+  & .alertModel, & .addressModel, & .shareModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; }
+  }
+
+  & .alertModel{
+    & .model-content{ background-color: #35B958; background-image: linear-gradient(-180deg, #36D761 0%, #299847 100%); border-radius: px2rem(14); width: px2rem(292); position: absolute; top: px2rem(72); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; float: right; margin: px2rem(8); background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; }
+    & .model-body{
+      & { padding: px2rem(83) 0 px2rem(50); text-align: center; }
+      & img{ width: px2rem(175); max-height: px2rem(200); display: block; margin: 0 auto; padding-bottom: px2rem(16); }
+      & span{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; font-weight: 600; }
+    }
+    & .model-btn{
+      &{ padding: 0 px2rem(18) px2rem(25); }
+      & button{ width: 100%; }
+    }
+  }
+
+  & .addressModel, & .shareModel{
+    & .model-content{ background-color: #35B958; background-image: linear-gradient(-180deg, #36D761 0%, #299847 100%); border-radius: px2rem(14); width: px2rem(292); position: absolute; top: px2rem(72); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; float: right; margin: px2rem(8); background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; }
+    & .model-body{
+      & { padding: px2rem(83) 0 px2rem(50); text-align: center; }
+      & h6{ font-size: px2rem(25); color: #fff; font-weight: 400; opacity: 0.8; padding-bottom: px2rem(30); }
+      & input{ width: px2rem(240); height: px2rem(40); background: rgba(0, 0, 0, 0.2); border: none; display: block; margin: 0 auto; border-radius: px2rem(6); outline: none; color: rgba(255, 255, 255, 0.8); padding: 0 px2rem(10); }
+      & input::-webkit-input-placeholder{ color: rgba(255, 255, 255, 0.5); }
+    }
+    & .model-btn{
+      &{ padding: 0 px2rem(18) px2rem(25); }
+      & button{ width: px2rem(123); }
+    }
+  }
+
+  & .rewardModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: url(http://cdns.jige.fun/o_1ceqf9go01etbgt31vfcepsct6c.png); background-size: auto auto; z-index: 5; }
+    & h2{ color: #fff; text-align: center; font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFE728; background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFFBD6), to(#FFD002)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: px2rem(24); font-weight: 600; line-height: px2rem(60); }
+    & p{ font-size: px2rem(20); color: #fff; text-align: center; padding-top: px2rem(100); opacity: 0.8; }
+    & ul{ position: absolute; top: px2rem(60); bottom: px2rem(100); left: px2rem(15); right: px2rem(15); overflow: scroll; }
+    & li{ 
+      &{ background-image: linear-gradient(-180deg, #36D761 0%, #299847 100%); box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.50); border-radius: px2rem(6); height: px2rem(64); padding: 0 px2rem(10) 0 px2rem(13); }
+      & img{ width: px2rem(40); height: px2rem(40); border-radius: 50%; transform: translateY(px2rem(12)); }
+      & span{ line-height: px2rem(64); color: #fff; font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(18); padding-left: px2rem(10); }
+      & div{ float: right; width: px2rem(67); padding-top: px2rem(20); }
+      & button{ width: px2rem(67); height: px2rem(23); font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(14); color: #924E07; box-shadow: none; }
+    }
+    & li + li{ margin-top: px2rem(10); }
+    & .back{ 
+      &{ position: absolute; bottom: px2rem(30); left: 0; right: 0; text-align: center;  }
+      & button{ width: px2rem(160); height: px2rem(46); font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); font-weight: 400;  }
+    }
+  }
+
+  & > .shareModel{
+    & h2{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(36); color: #fff; font-weight: 600; padding-bottom: px2rem(10); }
+    & img{ width: px2rem(250); }
+  }
+}

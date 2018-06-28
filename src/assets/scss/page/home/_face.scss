@@ -1,0 +1,21 @@
+#face{
+  &{ background: #fcfcfc!important; position: absolute!important; @include posFull(); }
+  & img{ display: block; width: 100%; }
+  & header{
+    &{ padding: px2rem(5) px2rem(14) px2rem(28); border-bottom: px2rem(5) solid #ebebeb; }
+  }
+  & .container{
+    &{ padding: px2rem(12) px2rem(14) px2rem(42); position: relative; }
+    & ul{ position: relative; }
+    & li{ margin-bottom: px2rem(10); width: px2rem(170); float: left; }
+    & li:nth-of-type(2){ float: right; }
+    & img{ border-radius: px2rem(5); border: px2rem(1) solid #eee; padding: px2rem(5) px2rem(3); }
+  }
+  & .more{ font-family: "SourceHanSansCN-Bold", $defaultFamily; font-size: px2rem(18); color: #797979; text-align: center; font-weight: 600; }
+  & footer{ font-family: "SourceHanSansCN-Bold", $defaultFamily; font-size: px2rem(12); color: #797979; text-align: center; padding: px2rem(25) 0; }
+  & footer.follow{
+    &{ padding-bottom: 0; }
+    img{ width: px2rem(100); }
+    p{ color: #797979; }
+  }
+}

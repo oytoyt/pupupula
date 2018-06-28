@@ -1,0 +1,101 @@
+#guess{
+  & { padding: px2rem(0) 0 px2rem(20); } 
+  & img{ display: block; width: 100%; }
+  & header{
+    & { padding: 0 px2rem(0) px2rem(12) px2rem(0); }
+  }
+  & .container{
+    &{ margin: 0 px2rem(5); }
+    & .vote{
+      & h2{ padding-bottom: px2rem(5); }
+      & h2 img{ height: px2rem(28); width: auto; margin: 0 auto; }
+      & small{
+        &{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(10); color: #FFE728; text-align: center; }
+        & b{ color: #fff; font-weight: normal; }
+      }
+      & .competition{ padding-top: px2rem(14); }
+      & .dayMatch{
+        &{ background: #35B93C; box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.40); border-radius: px2rem(8); padding: px2rem(68) px2rem(40) px2rem(45); position: relative; }
+        & .target{ width: px2rem(109); height: px2rem(30); line-height: px2rem(30); background: #fff; font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(14); color: #35B93C; position: absolute; left: px2rem(-3); top: px2rem(21); }
+        // & .target{ width: px2rem(109); height: px2rem(30); line-height: px2rem(30); background-image: linear-gradient(-180deg, #FFEB22 0%, #FFD20F 100%); font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(14); color: #35B93C; position: absolute; left: px2rem(-3); top: px2rem(21); }
+        & .target:after{ content: ""; width: 0; height: 0; border-width: px2rem(15) px2rem(5); border-style: solid; border-color: rgba(0, 0, 0, 0) #35B93C rgba(0, 0, 0, 0) rgba(0, 0, 0, 0); position: absolute; top: 0; right: 0; display: block; }
+        & .target:before{ content: ""; width: 0; height: 0; border: px2rem(1.5) solid #fff; border-color: #c9c9c9 #c9c9c9 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0); display: block; position: absolute; top: px2rem(30); }
+        & .match{
+          & li{
+            &{ display: flex; justify-content: space-between; }
+            & .left, & .right{
+              & img{ width: px2rem(64); height: px2rem(64); border-radius: 50%; margin: 0 auto; }
+            }
+            & > div{
+              & div{ width: px2rem(64); height: px2rem(64); }
+              & div{ margin: 0 auto; }
+              & h6{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(12); color: #FFE728; padding-top: px2rem(5); }
+              & button{ width: px2rem(74); height: px2rem(20); line-height: px2rem(20); border-radius: px2rem(0); font-family: "SourceHanSansCN-Normal", $defaultFamily; font-size: px2rem(12); box-shadow: none; }
+              & button.notSel{ background: #b8b8b8; color: #fff; }
+              & button.sel{ background: #f50404; color: #fff; }
+              & p{ font-family: "SourceHanSansCN-Normal", $defaultFamily; font-size: px2rem(8); color: #B4FE9E; }
+
+              &.center{
+                & img{ padding-top: px2rem(20); width: px2rem(54); margin: 0 auto; }
+              }
+            }
+            // & .countary{ background: url("http://cdns.jige.fun/o_1cfc7tr4l1mri4ad1ipb1gn0mk37.png") no-repeat; background-size: px2rem(307px) px2rem(846px); }
+          }
+          & li + li{ padding-top: px2rem(20); }
+        }
+      }
+      & .dayMatch + .dayMatch{ margin-top: px2rem(20); }
+    }
+    & .record{
+      &{ padding-bottom: px2rem(23); }
+      & p{ color: #fff; }
+      & h2 img{ height: px2rem(24); width: auto; margin: 0 auto; padding: px2rem(33) 0 px2rem(17); box-sizing: content-box; }
+      & .recordList{ background: #35B93C; box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.40); border-radius: px2rem(8); padding: px2rem(13) px2rem(15) px2rem(23) px2rem(23); position: relative; }
+      & li{
+        & + li{ padding-top: px2rem(20); }
+        & h6{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; text-align: left; padding-bottom: px2rem(24); }
+        & .aMatch{
+          &{ display: flex; justify-content: space-between; }
+          & .main, & .minor{
+            &{ width: px2rem(56); position: relative; }
+            & img{ width: px2rem(56); height: px2rem(56); border-radius: 50%; }
+            & span{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(11); color: #FFE728; text-align: center; word-break: keep-all; }
+          }
+          & .score{
+            &{ width: px2rem(61); text-align: center; }
+            &{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFE728; background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFFBD6), to(#FFD002)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; padding-top: px2rem(15); } 
+          }
+          & .result{
+            &{ width: px2rem(90); display: flex; justify-content: space-between; padding-top: px2rem(17); }
+            & span{ color: #fff; font-size: px2rem(14); font-family: "SourceHanSansCN-Regular", $defaultFamily; }
+            & button{ width: px2rem(62); height: px2rem(25); line-height: px2rem(25); font-family: "SourceHanSansCN-Normal", $defaultFamily; font-size: px2rem(12); color: #35B93C; box-shadow: none; border-radius: 0; }
+            & button.disabled{ background: #fff; }
+          }
+          & .win:after{ content: ""; width: px2rem(33); height: px2rem(32); display: block; background: url("http://cdns.jige.fun/o_1cf7h1vp7f0l1foq1fscj8h1ejj7.png") no-repeat; background-size: cover; position: absolute; top: px2rem(-17); right: px2rem(-13); transform: rotateZ(5deg); }
+        }
+      }
+    }
+  }
+  & footer{
+    &{ text-align: center; }
+    & img{ padding-bottom: px2rem(10); }
+    & span{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(10); color: #FFFFFF; }
+  }
+  & .container, & footer{ padding: 0 px2rem(20); text-align: center; }
+
+  & .rewardModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; }
+    & .model-content{ background-image: linear-gradient(-180deg, #36D761 0%, #299847 100%); border-radius: px2rem(14); width: px2rem(292); position: absolute; top: px2rem(72); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; position: absolute; right: px2rem(8); top: px2rem(8); }
+    & .model-body{
+      & { padding: px2rem(30) 0 px2rem(20); }
+      & img:first-of-type{ width: px2rem(130); }
+      & img + img{ padding-top: px2rem(20); width: px2rem(175); }
+      & img{ display: block; margin: 0 auto; }
+    }
+    & .model-btn{
+      &{ padding: 0 px2rem(18) px2rem(25); }
+      & .btn{ width: 100%; height: px2rem(40); line-height: px2rem(40);  border-radius: px2rem(8); font-family: "SourceHanSansCN-Normal", $defaultFamily; font-size: px2rem(12); font-size: px2rem(16); font-weight: 400; border: none; }
+    }
+  }
+}

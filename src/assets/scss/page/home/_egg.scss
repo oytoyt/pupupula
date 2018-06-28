@@ -1,0 +1,58 @@
+#egg{
+  &{ padding: px2rem(0) px2rem(0) px2rem(20); text-align: center; }
+  & button{ width: 100%; height: px2rem(50); font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(16); font-weight: 400; }
+  & header{
+    & img{ width: 100%; display: block; margin: 0 auto; padding-bottom: px2rem(12); }
+    & p{ width: 100%; background: #FFFFFF; border-radius: px2rem(60); text-align: center; padding: 0 px2rem(32); font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(14); color: #31A951; line-height: px2rem(18);padding: px2rem(5) px2rem(30); font-weight: 300; }
+    & div{ padding: 0 px2rem(18); }
+  }
+  & .pickEgg{
+    &{ padding: px2rem(15) px2rem(18) 0; }
+    & img{ width: 100%; display: block; border-radius: px2rem(3); margin-bottom: px2rem(12); box-shadow: 0 px2rem(2) px2rem(3) 0 rgba(0,0,0,0.50); }
+    & span{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(12); color: #F7D332; line-height: px2rem(45); }
+  }
+  & .sendEgg{
+    &{ padding: px2rem(32) px2rem(20) px2rem(16); }
+    & h2{ color: #fff; font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(24); font-weight: 400; }
+    & img{ width: px2rem(100); display: block; padding: px2rem(19) 0 px2rem(13); margin: 0 auto; }
+    & button{ height: px2rem(39); width: px2rem(200); }
+  }
+  & .cardModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; text-align: center; }
+    & h2{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(36); color: #fff; font-weight: 600; padding-bottom: px2rem(10); }
+    & .model-content{ background: #35B958; border-radius: px2rem(14); width: px2rem(325); position: absolute; top: px2rem(72); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; float: right; margin: px2rem(8); background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; }
+    & .model-body{
+      & { padding: px2rem(83) 0 px2rem(10); text-align: center; }
+      & img{ width: px2rem(313); max-height: px2rem(200); display: block; margin: 0 auto; padding-bottom: px2rem(16); }
+      & span{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; font-weight: 600; }
+    }
+    & .model-btn{
+      &{ padding: 0 px2rem(18) px2rem(25); }
+      & button{ width: 100%; height: px2rem(49); }
+    }
+  }
+
+  & > .cardModel{
+    & img{ width: auto!important; }
+  }
+  & .disabled{ pointer-events: none; }
+
+  #mcover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 20000;
+  }
+  #mcover img {
+      position: fixed;
+      right: 18px;
+      top: 5px;
+      width: 260px;
+      height: 180px;
+      z-index: 999;
+  }
+}

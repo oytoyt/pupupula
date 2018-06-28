@@ -1,0 +1,7 @@
+#rewardCard{
+  &{ text-align: center; padding: px2rem(10) px2rem(15); }
+  & h1{ color: #fff; font-size: px2rem(32); font-weight: 600; }
+  & img{ width: px2rem(200); padding-top: px2rem(20); }
+  & button{ width: px2rem(300); height: px2rem(49); }
+  & div div{ padding-top: px2rem(20); }
+}

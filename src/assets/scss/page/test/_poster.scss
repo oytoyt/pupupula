@@ -1,0 +1,10 @@
+#poster{
+  &{ padding-bottom: px2rem(10); }
+  & .shareBox{
+    &{ padding: px2rem(10) px2rem(12.5) px2rem(10);  }
+    & canvas{ width: px2rem(350); height: px2rem(492); margin: 0 auto; display: block; background: url(http://cdns.jige.fun/o_1cg0pm9kcjt0amnopr1jadh9dh.jpg) no-repeat; background-size: 100% auto; }
+    & img{ width: 100%; display: block; margin: 0 auto; }
+  }
+  & .hide{ display: none!important; }
+  & p{ text-align: center; font-size: px2rem(12); color: #fff; font-weight: 400; font-family: "SourceHanSansCN-Medium", $defaultFamily; }
+}

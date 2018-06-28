@@ -1,0 +1,99 @@
+#home{
+  & header{
+    &{ background: url(http://cdns.jige.fun/o_1cfp8somcj9gtda1hvm1l2q1q6om.png) no-repeat; background-size: 100% auto; width: 100%; height: px2rem(252); }
+    & span{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; transform: translateY(px2rem(-13)); border: px2rem(1) solid #fff; display: inline-block; transform: translate3d(px2rem(10), px2rem(10), 0); padding: 0 px2rem(5); }
+    & .price{
+      & img{ width: px2rem(26); height: px2rem(25); background: url("http://cdns.jige.fun/o_1cfei393o2fn1a7a10ji1vc370g7.png") no-repeat; background-size: cover; }
+      &{ position: fixed; top: 0; right: 0; transform: translate3d(px2rem(-10), px2rem(10), 0); z-index: 999; }
+      & p{ color: #fff; font-size: px2rem(14); font-weight: 300; line-height: px2rem(28); float: right; padding-left: px2rem(5); }
+    }
+  }
+  & .container{
+    // &{ padding: 0 px2rem(15); transform: translateY(px2rem(-30)); }
+    &{ padding: 0 px2rem(15) px2rem(15); }
+    & .tips{
+      &{ padding: px2rem(8) px2rem(30); background: #289545; background-image: linear-gradient(-180deg, #33AE54 0%, #289545 100%);  box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(49,65,38,0.73); border-radius: px2rem(8); }
+      & dt{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; font-weight: 400; text-align: center; }
+      & dd{ font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; font-weight: 300; }
+    }
+    & .card{
+      &{ text-align: center; }
+      & button{ width: px2rem(300); height: px2rem(49); }
+    }
+    & .btn-group{
+      &{ padding-top: px2rem(13); }
+      & > button + button{ margin-top: px2rem(10); }
+      & .smallBtn{
+        &{ padding-top: px2rem(8); }
+        & button{ width: px2rem(163); height: px2rem(42); }
+        & button + button{ float: right; }
+      }
+      & button{ width: 100%; height: px2rem(49); }
+    }
+    & .gift{
+      & h6{ font-size: px2rem(16); color: #fff; text-align: center; font-weight: 600; padding: px2rem(30) 0 px2rem(5); }
+      & p{ background: #FFFFFF; border-radius: px2rem(40); text-align: center; font-family: "SourceHanSansCN-Regular", $defaultFamily; font-size: px2rem(14); color: #31A951; line-height: px2rem(30); }
+      & img{ width: 100%; padding-top: px2rem(5); }
+    }
+  }
+
+  & .ruleModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; text-align: center; }
+    & h2{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(36); color: #fff; font-weight: 600; padding-bottom: px2rem(10); }
+    & .model-content{ background: #35B958; border-radius: px2rem(14); width: px2rem(325); position: absolute; top: px2rem(20); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; position: absolute; top: px2rem(-8); right: px2rem(-8); }
+    & .model-body{
+      & { padding: px2rem(20); padding-top: px2rem(20); text-align: left; font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(16); color: #fff; font-weight: 300; }
+      & h4{ font-weight: 800; text-align: center; font-size: px2rem(20); color: #fff; }
+      & h6{ color: #fff; }
+      & h6:last-of-type{ padding-top: px2rem(10); }
+    }
+  }
+  & .cardModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; text-align: center; }
+    & .model-content{ transform: translateY(px2rem(60)); position: relative; width: px2rem(235); margin: 0 auto; }
+    & .model-close{ width: px2rem(37); height: px2rem(37); border-radius: 50%; background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; position: absolute; right: 0; top: 0; transform: translate(50%, -50%); }
+    & img{ width: px2rem(235); }
+    & button{ width: px2rem(200); height: px2rem(39); }
+  }
+
+  & .card, & .shareCardModel{
+    &{ background-image: linear-gradient(-180deg, #36BF5B 0%, #299746 100%);
+      box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(47,99,11,0.73); border-radius: px2rem(8); padding: px2rem(12) px2rem(15) px2rem(12); margin-top: px2rem(8); }
+    & h6{ font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFFFFF; font-weight: 400; text-align: center; padding-bottom:  px2rem(15); }
+    & li{ width: px2rem(64); height: px2rem(64); float: left; margin-bottom: px2rem(10); position: relative; }
+    & li:not(:nth-of-type(4n-3)){ margin-left: px2rem(18.33); }
+    & li:nth-of-type(33){ float: left; transform: translateX(px2rem(126)); margin-top: px2rem(15); }
+    & li img{ width: 100%; display: block; border: none; @include posFull; }
+    & li img.unLock{ filter: grayscale(100%) blur(px2rem(2)); }
+    & .hideCard li:nth-of-type(n+13){ display: none; @include posFull; }
+    & ul span{ position: absolute; bottom: px2rem(-5); right: px2rem(-5); font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: 12px; color: #FFFFFF; border-radius: 50%; width: px2rem(18); height: px2rem(18); text-align: center; line-height: px2rem(18); background: #5FCEF9; box-shadow: 0 0 px2rem(1) 0 rgba(0,0,0,0.50); font-weight: 400; }
+    & .particular li{ float: none; margin: 0 auto; }
+    & .toggleCard{ font-family: "SourceHanSansCN-Normal", $defaultFamily; font-size: px2rem(12); color: #FFFFFF; text-align: center; padding-top: px2rem(25); }
+  }
+
+  & .shareCardModel{
+    &{ position: fixed; top: 0; left: 0; right: 0; bottom: 0; margin: 0; border-radius: 0; overflow-y: scroll; z-index: 999; }
+    & ul{ padding: 0 px2rem(15); }
+    & button{ width: 100%; height: px2rem(49); }
+  }
+
+  #mcover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 20000;
+  }
+  #mcover img {
+      position: fixed;
+      right: 18px;
+      top: 5px;
+      width: 260px;
+      height: 180px;
+      z-index: 1999;
+  }
+
+}

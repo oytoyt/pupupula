@@ -1,0 +1,4 @@
+#card{
+  &{ width: 100%; height: auto; overflow: hidden; padding-bottom: 10px; }
+  & > ul > li{ text-align: center; padding-top: 10px; float: left; background: red; }
+}

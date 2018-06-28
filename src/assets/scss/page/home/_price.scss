@@ -1,0 +1,35 @@
+#price{
+  &{
+    & h2{ color: #fff; text-align: center; font-family: "SourceHanSansCN-Heavy", $defaultFamily; font-size: px2rem(18); color: #FFE728; background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFFBD6), to(#FFD002)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: px2rem(24); font-weight: 600; line-height: px2rem(60); }
+    & p{ font-size: px2rem(20); color: #fff; text-align: center; padding-top: px2rem(100); opacity: 0.8; }
+    & ul{ position: fixed; top: px2rem(60); bottom: px2rem(100); left: px2rem(15); right: px2rem(15); overflow: scroll; }
+    & li{ 
+      &{background: #F5BA36; box-shadow: 0 px2rem(2) px2rem(4) 0 rgba(0,0,0,0.50); border-radius: px2rem(6); height: px2rem(64); padding: 0 px2rem(10) 0 px2rem(13); }
+      & img{ width: px2rem(40); height: px2rem(40); border-radius: 50%; transform: translateY(px2rem(12)); }
+      & span{ line-height: px2rem(64); color: #000; font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(18); padding-left: px2rem(10); }
+      & div{ float: right; width: px2rem(67); padding-top: px2rem(20); }
+      & button{ width: px2rem(67); height: px2rem(23); font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(14); color: #fff; background-image: linear-gradient(-180deg, #FFA5A5 0%, #E33F24 100%); border: none; box-shadow: none; }
+    }
+    & li + li{ margin-top: px2rem(10); }
+    & .back{ 
+      &{ position: fixed; bottom: px2rem(30); left: 0; right: 0; text-align: center; padding: 0 px2rem(15);  }
+      & button{ width: 100%; height: px2rem(46); }
+    }
+  }
+
+  & .addressModel{
+    &{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); z-index: 1000; }
+    & .model-content{ background: #35B958; border-radius: px2rem(14); width: px2rem(292); position: absolute; top: px2rem(72); left: 0; right: 0; margin: auto; }
+    & .model-close{ width: px2rem(38); height: px2rem(38); border-radius: 50%; float: right; margin: px2rem(8); background: url(http://cdns.jige.fun/o_1ceo8c6ai9pf1ldoerj205g4q1f.png) no-repeat; background-size: cover; }
+    & .model-body{
+      & { padding: px2rem(83) 0 px2rem(50); text-align: center; }
+      & h6{ font-size: px2rem(25); color: #fff; font-weight: 400; opacity: 0.8; padding-bottom: px2rem(30); }
+      & input{ width: px2rem(240); height: px2rem(40); background: rgba(0, 0, 0, 0.2); border: none; display: block; margin: 0 auto; border-radius: px2rem(6); outline: none; color: rgba(255, 255, 255, 0.8); padding: 0 px2rem(10); }
+      & input::-webkit-input-placeholder{ color: rgba(255, 255, 255, 0.5); }
+    }
+    & .model-btn{
+      &{ padding: 0 px2rem(18) px2rem(25); }
+      & button{ width: px2rem(123); color: #fff; font-weight: 300; font-family: "SourceHanSansCN-Medium", $defaultFamily; background-image: linear-gradient(-180deg, #FFA5A5 0%, #E33F24 100%); border: none; }
+    }
+  }
+}

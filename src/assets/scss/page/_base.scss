@@ -1,0 +1,56 @@
+#app{
+  &{ @include posFull();overflow-y: auto;overflow-x: hidden;-webkit-overflow-scrolling: touch; }
+  &>.route{ overflow-x: hidden;-webkit-overflow-scrolling: touch; position: relative; }
+  &, & > .route{ background: url(http://cdns.jige.fun/o_1ceqf9go01etbgt31vfcepsct6c.png); background-size: auto auto; }
+}
+
+.task{
+  $drution: 0.35s;
+  &-in-enter-active{ animation: slideInUp $drution ease-in-out; }
+  &-in-leave-active{ animation: slideOutUp $drution ease-in-out;  }
+
+  &-out-enter-active{ animation: slideInDown $drution ease-in-out; }
+  &-out-leave-active{ animation: slideOutDown $drution ease-in-out;  }
+}
+
+.slide{
+  $drution: 0.35s;
+  &-prev-enter-active{ animation: slideInLeft $drution ease-in-out; }
+  &-prev-leave-active{ animation: slideOutRight $drution ease-in-out;  }
+
+  &-next-enter-active{ animation: slideInRight $drution ease-in-out; }
+  &-next-leave-active{ animation: slideOutLeft $drution ease-in-out;  }
+}
+
+.btn{ background: #FFCB4A; border-radius: px2rem(8); font-family: "SourceHanSansCN-Medium", $defaultFamily;
+  font-size: px2rem(16); color: #A37B19; font-weight: 400; box-shadow: px2rem(1) px2rem(1) 0 #725100; }
+
+.shadow{ background-image: linear-gradient(-180deg, #33AE54 0%, #289545 100%); }
+
+.textOver{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+
+
+.follow{
+  & { padding: px2rem(10) 0; }
+  & img{ width: px2rem(100); margin: 0 auto; display: block; }
+  & p{ color: #fff; text-align: center; line-height: px2rem(30); font-size: px2rem(12); }
+}
+
+#mcover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 20000;
+}
+#mcover img {
+  position: fixed;
+  right: 18px;
+  top: 5px;
+  width: 260px;
+  height: 180px;
+  z-index: 999;
+}

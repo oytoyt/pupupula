@@ -1,0 +1,57 @@
+#gather{
+  &{ background-color: #2FA64F; }
+  & header{
+    &{ border-bottom: px2rem(5) solid #D4DA49; padding: px2rem(11) px2rem(10) px2rem(20); }
+    & i{ display: inline-block; width: px2rem(20); height: px2rem(20); background-size: cover; margin-right: px2rem(5); transform: translateY(px2rem(3)); }
+    & p{ font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; }
+    & p i{  background-image: url("http://ok88g05g7.qnssl.com/o_1cg3c7bdk1imfrn1p5o1tqod3f7.png");  }
+    & .hdImg{ 
+      &{  padding: px2rem(26) 0 px2rem(12); }
+      & img{ display: block; margin: 0 auto; width: px2rem(86); height: px2rem(86); border-radius: 50%; border: px2rem(2) solid #fff; }
+    }
+    & .bottom{
+      &{ display: flex; justify-content: space-between; font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(14); color: #FFFFFF; position: relative; }
+      & .name{ position: absolute; left: 0; right: 0; bottom: 0; text-align: center; }
+      & .card i{ width: px2rem(19); height: px2rem(21); background-image: url("http://ok88g05g7.qnssl.com/o_1cg3cn47sfbd10bq1btvt6d47ac.png"); }
+      & .code i{ background-image: url("http://ok88g05g7.qnssl.com/o_1cg3cpra8h084j11r7acj7hjlh.png"); }
+      & .card, & .code{ position: relative; z-index: 999; }
+    }
+  }
+  & .container{
+    &{ padding: px2rem(12) px2rem(14) 0; }
+    & .fl{ float: left; }
+    & .fr{ float: right; }
+    & .text{
+      &{ position: relative; display: table; }
+      & img{ width: 100%; }
+      & p{ text-align: center; color: #fff; font-family: "SourceHanSansCN-Medium", $defaultFamily; font-size: px2rem(18); position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); text-align: center; }
+      & img{ display: block; top: 50%; }
+    }
+    & > .begin{
+      &{ width: 100%; }
+    }
+    & > .st{
+      &{ padding-top: px2rem(5); }
+      & .left{ width: px2rem(170); }
+      & .right{
+        &{ width: px2rem(170); }
+      }
+    }
+    & > .nd{
+      & p{ transform: translate(px2rem(55), -50%); }
+    }
+
+    & .card{ min-height: px2rem(200); width: 100%; }
+    & .guess{ min-height: px2rem(60); width: 100%; }
+    & .dial{ min-height: px2rem(120); width: 100%; }
+    & .football{ min-height: px2rem(60); width: 100%; }
+    & .face{ min-height: px2rem(60); width: 100%; }
+    & .nd{ min-height: px2rem(60); width: 100%; }
+  }
+  footer{
+    &{ text-align: center; font-family: "SourceHanSansCN-Bold", $defaultFamily; font-size: px2rem(12); color: #FFFFFF; padding: px2rem(15) 0; line-height: px2rem(20); }
+    & span{ font-weight: 400; font-size: px2rem(14); }
+  }
+}
+
+.gatherQrCode, .gatherQrCode div{ text-align: center!important; }

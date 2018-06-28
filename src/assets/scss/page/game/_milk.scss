@@ -1,0 +1,17 @@
+#milk{
+  &{ height: 100%; }
+  & .top{ width: 100%; height: 80%; background: yellowgreen; }
+  & .bottom{ 
+    &{ width: 100%; height: px2rem(180); background: turquoise; position: fixed; bottom: 0; }
+    & .type{
+      &{ height: px2rem(30); line-height: px2rem(30); display: flex; justify-content: space-around; background: rgba(0, 0, 0, .4); color: #fff }
+    }
+    & .selList{
+      &{ height: px2rem(150); overflow-y: scroll; }
+      & li{ float: left; width: px2rem(125); height: px2rem(125); padding: px2rem(10); }
+      & li img{ width: 100%; }
+    }
+  }
+  & button{ position: fixed; top: 0; }
+  & button + button{ position: fixed; top: 0; right: 0; }
+}

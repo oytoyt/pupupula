@@ -1,0 +1,31 @@
+@import "./variable/_base";
+@import "./function/_base";
+
+@import "./mixin/_base";
+
+@import "./variable/_base";
+
+@import "./base/_reset";
+@import "./base/_base";
+
+@import "./page/common/card";
+
+@import "./page/_base";
+@import "./page/home/_index";
+@import "./page/home/_share";
+@import "./page/home/_egg";
+@import "./page/home/_price";
+@import "./page/home/_rewardCard";
+@import "./page/home/_gather";
+@import "./page/home/_face";
+
+@import "./page/dial/_typo";
+@import "./page/dial/_dial";
+@import "./page/dial/_index";
+
+@import "./page/game/_index";
+@import "./page/game/_tiger";
+@import "./page/game/_guess";
+@import "./page/game/_milk";
+
+@import "./page/test/_poster";
